@@ -4,34 +4,76 @@
       <li class="sidebar-list__item logo">
         <a href="javascript:void(0)" class="sidebar-list__link">
           <img src="../assets/images/logo.svg" alt="" width="20">
-          stocklabs
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2 logo-name">stocklabs</span>
+          </transition>
         </a>
       </li>
-      <li class="sidebar-list__item search">
-        <div class="expand-icon icon-arrow-right-c" @click="open = true">
+      <li class="sidebar-list__item">
+        <div class="expand-icon icon-arrow-right" @click="open = ! open" :class="open && 'open'">
         </div>
-        <a href="javascript:void(0)" class="sidebar-list__link">Search</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-search"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Search</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Home</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-home"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Home</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Market View</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-bar-chart"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Market View</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">News</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-bell-on"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">News</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Industries</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-calendar"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Industries</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Screencer</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-cast"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Screencer</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Watch list</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-compass"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Watch list</span>
+          </transition>
+        </a>
       </li>
       <li class="sidebar-list__item">
-        <a href="javascript:void(0)" class="sidebar-list__link">Chat</a>
+        <a href="javascript:void(0)" class="sidebar-list__link">
+          <span class="icon-folder"></span>
+          <transition name="fade-in">
+            <span v-if="open" class="ml-2">Chat</span>
+          </transition>
+        </a>
       </li>
     </ul>
   </nav>
