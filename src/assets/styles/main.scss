@@ -6,6 +6,16 @@
     width: 0;
 }
 
+@for $i from 1 through 9 {
+    .sidebar-list__item:nth-child(#{$i}) {
+        .sidebar-list__link {
+            .ml-2.fade-in-enter-active {
+                transition-delay: #{$i * .03}s;
+            }
+        }
+    }
+}
+
 .fade-in-enter-active {
     transition: all .22s ease;
 }
@@ -37,7 +47,7 @@ body {
     background-color: #1F2933;
     min-height: 100vh;
     width: 73px;
-    transition: width .1s ease;
+    transition: width .22s ease-in;
     &.open {
         width: 15vw;
     }
