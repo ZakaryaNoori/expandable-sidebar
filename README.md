@@ -1,4 +1,4 @@
-# expandable-sidebar
+# expandable-sidebar with animation using vue and scss
 
 ## Project setup
 ```
